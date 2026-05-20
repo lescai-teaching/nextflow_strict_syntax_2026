@@ -45,8 +45,10 @@ jobs:
 
       - name: Install nf-test
         run: |
+          cd "$RUNNER_TEMP"
           curl -fsSL https://code.askimed.com/install/nf-test | bash
-          echo "$HOME/.nf-test/bin" >> "$GITHUB_PATH"
+          sudo mv nf-test /usr/local/bin/
+          nf-test version
 
       - name: Check exercise diversity
         run: make check-exercises
