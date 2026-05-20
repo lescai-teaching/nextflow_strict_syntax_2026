@@ -1,0 +1,1 @@
+# nextflow_strict_syntax_2026
