@@ -1,0 +1,20 @@
+nextflow_pipeline {
+
+    name "Process syntax migration solution"
+    script "../main.nf"
+    config "../nextflow.config"
+
+    tag "process_syntax"
+
+    test("runs migrated process syntax") {
+
+        options "-profile test"
+
+        then {
+            assertAll(
+                { assert workflow.success },
+                { assert workflow.trace.tasks().size() == 1 }
+            )
+        }
+    }
+}

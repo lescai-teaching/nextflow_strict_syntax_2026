@@ -1,0 +1,35 @@
+.md-header__button.md-logo {
+  margin: 0 0.45rem 0 0;
+  padding: 0.25rem 0;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.65rem;
+  max-width: 8rem;
+  object-fit: contain;
+  width: auto;
+}
+
+@media screen and (max-width: 40rem) {
+  .md-header__button.md-logo img,
+  .md-header__button.md-logo svg {
+    max-width: 6.5rem;
+  }
+}
+
+:root {
+  --md-primary-fg-color: #1565c0;
+  --md-primary-fg-color--light: #1e88e5;
+  --md-primary-fg-color--dark: #0d47a1;
+  --md-accent-fg-color: #0288d1;
+}
+
+.md-typeset .timebox {
+  border-left: 0.2rem solid var(--md-primary-fg-color);
+  padding-left: 0.8rem;
+}
+
+.md-typeset code {
+  word-break: break-word;
+}

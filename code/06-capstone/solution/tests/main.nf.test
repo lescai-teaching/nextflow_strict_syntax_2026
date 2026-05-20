@@ -1,0 +1,20 @@
+nextflow_pipeline {
+
+    name "Capstone migrated workflow"
+    script "../main.nf"
+    config "../nextflow.config"
+
+    tag "capstone"
+
+    test("runs migrated capstone") {
+
+        options "-profile test"
+
+        then {
+            assertAll(
+                { assert workflow.success },
+                { assert workflow.trace.tasks().size() == 2 }
+            )
+        }
+    }
+}
