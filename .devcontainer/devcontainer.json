@@ -14,7 +14,7 @@
         "DOCKER_API_VERSION": "1.43"
     },
     "onCreateCommand": "bash .devcontainer/setup.sh",
-    "postStartCommand": "bash -l -c 'pkill -f \"mkdocs serve\" 2>/dev/null; mkdocs serve --dev-addr 0.0.0.0:8000 > /tmp/mkdocs.log 2>&1 &'",
+    "postStartCommand": "bash -c 'pkill -f \"mkdocs serve\" 2>/dev/null; /opt/conda/bin/mkdocs serve --dev-addr 0.0.0.0:8000 > /tmp/mkdocs.log 2>&1 &'",
     "forwardPorts": [
         8000
     ],
