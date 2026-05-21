@@ -17,6 +17,13 @@
     "forwardPorts": [
         8000
     ],
+    "portsAttributes": {
+        "8000": {
+            "label": "MkDocs site",
+            "onAutoForward": "openPreview",
+            "protocol": "http"
+        }
+    },
     "customizations": {
         "vscode": {
             "extensions": [
