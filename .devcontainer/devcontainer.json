@@ -14,9 +14,7 @@
         "DOCKER_API_VERSION": "1.43"
     },
     "onCreateCommand": "bash .devcontainer/setup.sh",
-    "postAttachCommand": {
-        "serve-docs": "nohup make serve > /tmp/mkdocs.log 2>&1 &"
-    },
+    "postStartCommand": "bash -c 'make serve > /tmp/mkdocs.log 2>&1 &'",
     "forwardPorts": [
         8000
     ],
