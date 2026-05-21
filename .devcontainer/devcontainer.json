@@ -34,7 +34,8 @@
             ],
             "settings": {
                 "python.defaultInterpreterPath": "/opt/conda/bin/python",
-                "terminal.integrated.defaultProfile.linux": "bash"
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "workbench.startupEditor": "none"
             }
         }
     }

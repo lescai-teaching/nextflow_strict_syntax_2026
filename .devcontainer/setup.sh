@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-printf "export PS1='\\[\\e[3;36m\\]\\${PWD#/workspaces/} ->\\[\\e[0m\\] '\n" >> "$HOME/.bashrc"
-export PS1='\[\e[3;36m\]${PWD#/workspaces/} ->\[\e[0m\] '
+printf "export PS1='\\[\\e[0;36m\\]\\W \\[\\e[0m\\]> '\n" >> "$HOME/.bashrc"
+export PS1='\[\e[0;36m\]\W \[\e[0m\]> '
 
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt nf-core
