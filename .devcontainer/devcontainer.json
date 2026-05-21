@@ -21,7 +21,8 @@
         "8000": {
             "label": "MkDocs site",
             "onAutoForward": "openPreview",
-            "protocol": "http"
+            "protocol": "http",
+            "visibility": "public"
         }
     },
     "customizations": {
