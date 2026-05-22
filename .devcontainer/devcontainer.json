@@ -10,10 +10,6 @@
         "HOST_PROJECT_PATH": "/workspaces/nextflow_strict_syntax_2026",
         "SHELL": "/bin/bash"
     },
-    "containerEnv": {
-        "DOCKER_API_VERSION": "1.43"
-    },
-    "onCreateCommand": "bash .devcontainer/setup.sh",
     "forwardPorts": [
         8000
     ],
@@ -30,10 +26,6 @@
     },
     "customizations": {
         "vscode": {
-            "extensions": [
-                "nf-core.nf-core-extensionpack",
-                "ms-vscode.live-server"
-            ],
             "settings": {
                 "python.defaultInterpreterPath": "/opt/conda/bin/python",
                 "terminal.integrated.defaultProfile.linux": "bash",

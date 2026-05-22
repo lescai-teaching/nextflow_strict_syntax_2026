@@ -15,7 +15,7 @@ The workshop is designed for a 2.5 hour session. It contains:
 ## Quick Start
 
 In GitHub Codespaces, the devcontainer uses the required training tools from
-the base image and only installs missing tools during first setup.
+the base image and does not run package installation during startup.
 For local use, install Java, Nextflow 26.04.1, nf-test, nf-core 4.0.2, and
 MkDocs Material, then run:
 

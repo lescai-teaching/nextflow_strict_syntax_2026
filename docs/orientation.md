@@ -5,9 +5,9 @@ The workshop is easiest to run in GitHub Codespaces. The repository includes a `
 ## Start the environment
 
 Open the repository in Codespaces. The container uses the official training
-image and the setup step only installs tools that are missing from that image,
-so rebuilds should not spend time reinstalling the Python stack or refreshing
-Nextflow. When the container finishes building, check the installed tools:
+image without running package installation during startup, so opening a
+Codespace should only pull and start the ready environment. When the container
+finishes building, check the installed tools:
 
 ```bash
 make check-tools
