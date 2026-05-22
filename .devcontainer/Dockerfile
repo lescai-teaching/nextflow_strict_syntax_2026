@@ -35,4 +35,5 @@ RUN chmod -R a+rX "${MAMBA_ROOT_PREFIX}" \
     && nf-test version \
     && mkdocs --version
 
+USER vscode
 WORKDIR /workspaces
