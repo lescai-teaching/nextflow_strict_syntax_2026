@@ -9,7 +9,8 @@ ENV MAMBA_ROOT_PREFIX=/opt/conda \
     PATH=/opt/conda/bin:$PATH \
     NXF_EDGE=0 \
     NXF_VER=26.04.1 \
-    NXF_HOME=/workspaces/.nextflow \
+    NXF_HOME=/home/vscode/.nextflow \
+    SHELL=/bin/bash \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PYTHONUNBUFFERED=1
 
@@ -29,11 +30,14 @@ RUN apt-get update \
     && micromamba clean -a -y \
     && rm -f /tmp/conda.yml
 
-RUN chmod -R a+rX "${MAMBA_ROOT_PREFIX}" \
-    && nextflow -version \
-    && nf-core --version \
-    && nf-test version \
-    && mkdocs --version
+RUN mkdir -p "${NXF_HOME}" \
+    && chown -R vscode:vscode "${NXF_HOME}" \
+    && chmod -R a+rX "${MAMBA_ROOT_PREFIX}"
 
 USER vscode
 WORKDIR /workspaces
+
+RUN nextflow -version \
+    && nf-core --version \
+    && nf-test version \
+    && mkdocs --version
