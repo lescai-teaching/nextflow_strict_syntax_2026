@@ -14,9 +14,7 @@
         "DOCKER_API_VERSION": "1.43"
     },
     "onCreateCommand": "bash .devcontainer/setup.sh",
-    "postStartCommand": {
-        "serve-docs": "python -m mkdocs serve --dev-addr 0.0.0.0:8000 > /tmp/mkdocs.log 2>&1"
-    },
+    "postStartCommand": "python -c \"import subprocess,sys; subprocess.Popen([sys.executable,'-m','mkdocs','serve','--dev-addr','0.0.0.0:8000'],stdout=open('/tmp/mkdocs.log','w'),stderr=subprocess.STDOUT,start_new_session=True,cwd='/workspaces/nextflow_strict_syntax_2026')\"",
     "forwardPorts": [
         8000
     ],
@@ -24,8 +22,7 @@
         "8000": {
             "label": "MkDocs site",
             "onAutoForward": "openPreview",
-            "protocol": "http",
-            "visibility": "public"
+            "protocol": "http"
         }
     },
     "customizations": {
