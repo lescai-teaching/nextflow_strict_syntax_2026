@@ -1,6 +1,6 @@
 {
     "name": "nextflow-strict-syntax-workshop",
-    "image": "community.wave.seqera.io/library/nextflow_nf-core_nf-test_pip_pruned:addba6e255f2f233",
+    "image": "ghcr.io/lescai-teaching/nextflow_syntax_26_04_1:69c5f5d25c929208",
     "workspaceFolder": "/workspaces/nextflow_strict_syntax_2026",
     "remoteUser": "root",
     "remoteEnv": {
