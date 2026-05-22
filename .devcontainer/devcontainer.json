@@ -1,6 +1,6 @@
 {
     "name": "nextflow-strict-syntax-workshop",
-    "image": "ghcr.io/lescai-teaching/nextflow_syntax_26_04_1:69c5f5d25c929208",
+    "image": "ghcr.io/lescai-teaching/nextflow_syntax_26_04_1:d74afd8771086e1c",
     "workspaceFolder": "/workspaces/nextflow_strict_syntax_2026",
     "remoteEnv": {
         "NXF_HOME": "/home/vscode/.nextflow",
