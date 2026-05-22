@@ -33,8 +33,8 @@ make serve
 
 This starts MkDocs in the background so the terminal remains usable. Use
 `make serve-status`, `make serve-logs`, and `make serve-stop` to inspect or stop
-the server. In Codespaces, open port `8000` with **Open in Browser** rather than
-the embedded editor preview.
+the server. In Codespaces, open port `8000` from the Ports panel with **Open in
+Browser** rather than the embedded editor preview.
 
 ## Workshop Scope
 

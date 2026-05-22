@@ -9,29 +9,5 @@
         "NXF_VER": "26.04.1",
         "HOST_PROJECT_PATH": "/workspaces/nextflow_strict_syntax_2026",
         "SHELL": "/bin/bash"
-    },
-    "forwardPorts": [
-        8000
-    ],
-    "portsAttributes": {
-        "8000": {
-            "label": "MkDocs site",
-            "onAutoForward": "openBrowser",
-            "protocol": "http",
-            "visibility": "public"
-        }
-    },
-    "otherPortsAttributes": {
-        "onAutoForward": "silent"
-    },
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "python.defaultInterpreterPath": "/opt/conda/bin/python",
-                "terminal.integrated.defaultProfile.linux": "bash",
-                "remote.autoForwardPortsSource": "process",
-                "workbench.startupEditor": "none"
-            }
-        }
     }
 }

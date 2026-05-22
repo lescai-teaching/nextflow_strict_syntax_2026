@@ -56,9 +56,8 @@ make serve
 ```
 
 This starts MkDocs in the background and returns control to the terminal. In
-Codespaces, port `8000` is configured to open in a real browser tab; if you
-open it manually from the Ports panel, choose **Open in Browser** rather than
-**Preview in Editor**.
+Codespaces, open port `8000` manually from the Ports panel and choose **Open in
+Browser** rather than **Preview in Editor**.
 
 Useful server commands:
 
