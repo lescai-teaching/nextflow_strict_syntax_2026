@@ -4,7 +4,10 @@ The workshop is easiest to run in GitHub Codespaces. The repository includes a `
 
 ## Start the environment
 
-Open the repository in Codespaces. When the container finishes building, check the installed tools:
+Open the repository in Codespaces. The container uses the official training
+image and the setup step only installs tools that are missing from that image,
+so rebuilds should not spend time reinstalling the Python stack or refreshing
+Nextflow. When the container finishes building, check the installed tools:
 
 ```bash
 make check-tools
@@ -15,6 +18,7 @@ make check-tools
     ```console
     nextflow version 26.04.1
     nf-test ...
+    nf-core, version 4.0.2
     mkdocs, version ...
     ```
 
@@ -51,7 +55,18 @@ tree . -L 3
 make serve
 ```
 
-Then open the forwarded port `8000`.
+This starts MkDocs in the background and returns control to the terminal. In
+Codespaces, port `8000` is configured to open in a real browser tab; if you
+open it manually from the Ports panel, choose **Open in Browser** rather than
+**Preview in Editor**.
+
+Useful server commands:
+
+```bash
+make serve-status
+make serve-logs
+make serve-stop
+```
 
 ## Working pattern
 
@@ -71,6 +86,8 @@ Use these commands from the repository root:
 
 ```bash
 make docs              # mkdocs build --strict
+make serve             # start mkdocs in the background on port 8000
+make serve-stop        # stop the background mkdocs server
 make lint              # nextflow lint on every demo/ and solution/
 make test              # nextflow run + nf-test on every solution/
 make check-exercises   # guard: exercise/main.nf must differ from demo/legacy.nf

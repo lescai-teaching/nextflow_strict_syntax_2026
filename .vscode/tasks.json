@@ -5,9 +5,19 @@
       "label": "Serve workshop docs",
       "type": "shell",
       "command": "make serve",
-      "isBackground": true,
       "presentation": {
-        "reveal": "silent",
+        "reveal": "always",
+        "panel": "dedicated",
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Stop workshop docs",
+      "type": "shell",
+      "command": "make serve-stop",
+      "presentation": {
+        "reveal": "always",
         "panel": "dedicated",
         "showReuseMessage": false
       },

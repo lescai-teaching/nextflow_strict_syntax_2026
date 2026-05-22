@@ -14,8 +14,9 @@ The workshop is designed for a 2.5 hour session. It contains:
 
 ## Quick Start
 
-In GitHub Codespaces, the devcontainer installs the required training tools.
-For local use, install Java, Nextflow 26.04.1, nf-test, nf-core tools, and
+In GitHub Codespaces, the devcontainer uses the required training tools from
+the base image and only installs missing tools during first setup.
+For local use, install Java, Nextflow 26.04.1, nf-test, nf-core 4.0.2, and
 MkDocs Material, then run:
 
 ```bash
@@ -29,6 +30,11 @@ To preview the documentation locally:
 ```bash
 make serve
 ```
+
+This starts MkDocs in the background so the terminal remains usable. Use
+`make serve-status`, `make serve-logs`, and `make serve-stop` to inspect or stop
+the server. In Codespaces, open port `8000` with **Open in Browser** rather than
+the embedded editor preview.
 
 ## Workshop Scope
 

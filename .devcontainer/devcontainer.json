@@ -20,10 +20,13 @@
     "portsAttributes": {
         "8000": {
             "label": "MkDocs site",
-            "onAutoForward": "openBrowserOnce",
+            "onAutoForward": "openBrowser",
             "protocol": "http",
             "visibility": "public"
         }
+    },
+    "otherPortsAttributes": {
+        "onAutoForward": "silent"
     },
     "customizations": {
         "vscode": {
@@ -34,6 +37,7 @@
             "settings": {
                 "python.defaultInterpreterPath": "/opt/conda/bin/python",
                 "terminal.integrated.defaultProfile.linux": "bash",
+                "remote.autoForwardPortsSource": "process",
                 "workbench.startupEditor": "none"
             }
         }
