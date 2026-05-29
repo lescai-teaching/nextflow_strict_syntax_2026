@@ -2,12 +2,26 @@
     "name": "nextflow-strict-syntax-workshop",
     "image": "ghcr.io/lescai-teaching/nextflow_syntax_26_04_1:d74afd8771086e1c",
     "workspaceFolder": "/workspaces/nextflow_strict_syntax_2026",
-    "userEnvProbe": "none",
     "remoteEnv": {
         "NXF_HOME": "/home/vscode/.nextflow",
         "NXF_EDGE": "0",
         "NXF_VER": "26.04.1",
         "HOST_PROJECT_PATH": "/workspaces/nextflow_strict_syntax_2026",
         "SHELL": "/bin/bash"
-    }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "workbench.startupEditor": "none"
+            }
+        }
+    },
+    "forwardPorts": [8000],
+    "portsAttributes": {
+        "8000": {
+            "label": "MkDocs Documentation",
+            "onAutoForward": "openPreview"
+        }
+    },
+    "postStartCommand": "nohup mkdocs serve -a 0.0.0.0:8000 > /tmp/mkdocs.log 2>&1 &"
 }
