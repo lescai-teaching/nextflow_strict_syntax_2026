@@ -22,6 +22,5 @@
             "label": "MkDocs Documentation",
             "onAutoForward": "openPreview"
         }
-    },
-    "postStartCommand": "nohup mkdocs serve -a 0.0.0.0:8000 > /tmp/mkdocs.log 2>&1 &"
+    }
 }

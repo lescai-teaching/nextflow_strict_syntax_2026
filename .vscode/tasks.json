@@ -4,18 +4,21 @@
     {
       "label": "Serve workshop docs",
       "type": "shell",
-      "command": "make serve",
+      "command": "/opt/conda/bin/mkdocs serve -a 0.0.0.0",
       "presentation": {
         "reveal": "always",
         "panel": "dedicated",
         "showReuseMessage": false
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
       },
       "problemMatcher": []
     },
     {
       "label": "Stop workshop docs",
       "type": "shell",
-      "command": "make serve-stop",
+      "command": "pkill -f mkdocs",
       "presentation": {
         "reveal": "always",
         "panel": "dedicated",
